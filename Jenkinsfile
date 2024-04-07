@@ -4,8 +4,6 @@ pipeline {
         stage('Setup'){
             steps {
                 sh 'python3 --version'
-                sh 'python3 -m venv ./venv'
-                sh 'source venv/bin/activate'
             }
         }
         stage('Dependencies'){
@@ -24,7 +22,6 @@ pipeline {
             steps {
                 sh 'behave'
                 sh './jenkins/scripts/test.sh' 
-                sh 'source deactivate'
             }
         }
     }
