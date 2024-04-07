@@ -4,6 +4,7 @@ pipeline {
         stage('Setup'){
             steps {
                 sh 'python3 --version'
+                sh 'python3 -m ensurepip --upgrade'
             }
         }
         stage('Dependencies'){
