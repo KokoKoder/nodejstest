@@ -8,8 +8,8 @@ pipeline {
         }
         stage('Dependencies'){
             steps {
-                sh 'pip3 install selenium'
-                sh 'pip3 install git+https://github.com/behave/behave'
+                sh 'pip install selenium'
+                sh 'pip install git+https://github.com/behave/behave'
                 
             }
         }
