@@ -11,6 +11,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "sample-test": "node selenium-test.js",
     "eject": "react-scripts eject"
   },
   "browserslist": {
@@ -24,5 +25,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.4.0",
+    "selenium-webdriver": "^4.19.0"
   }
 }
