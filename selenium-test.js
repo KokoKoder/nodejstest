@@ -1,10 +1,10 @@
 var webdriver = require('selenium-webdriver');
 
-var browser = new webdriver.Builder();
+var browser_name = new webdriver.Builder();
 
-browser.withCapabilities(webdriver.Capabilities.firefox()).build();
+browser_name.withCapabilities(webdriver.Capabilities.firefox()).build();
 
-browser.get('http://www.google.com');
+browser_name.get('http://www.google.com');
 
 var promise = browser_name.getTitle();
 
