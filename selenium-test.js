@@ -1,8 +1,8 @@
 var webdriver = require('selenium-webdriver');
 
-var browser_name = new webdriver.Builder();
+var browser = new webdriver.Builder();
 
-browser_name.withCapabilities(webdriver.Capabilities.firefox()).build();
+browser.withCapabilities(webdriver.Capabilities.firefox()).build();
 
 browser.get('http://www.google.com');
 
