@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Test') { 
             steps {
-                sh 'npm run sample-test'
+                sh './jenkins/scripts/test.sh'
             }
         }
     }
