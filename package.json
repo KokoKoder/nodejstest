@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "chromedriver": "^123.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1"
@@ -12,6 +13,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "sample-test": "node selenium-test.js",
+    "cucumber-test": "cucumber-js",
     "eject": "react-scripts eject"
   },
   "browserslist": {
@@ -28,6 +30,7 @@
   },
   "devDependencies": {
     "@cucumber/cucumber": "^10.4.0",
+    "mocha": "10.4.0",
     "selenium-webdriver": "^4.19.0"
   }
 }

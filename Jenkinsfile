@@ -3,12 +3,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'node -version'
                 sh 'npm install'
             }
         }
         stage('Test') { 
             steps {
-                sh './jenkins/scripts/test.sh'
+                sh 'npm run cucumber-test'
             }
         }
     }
