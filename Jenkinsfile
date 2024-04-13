@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { docker { image '21.7.2' } }
     stages {
         stage('Build') {
             steps {
