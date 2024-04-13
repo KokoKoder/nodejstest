@@ -11,7 +11,7 @@ pipeline {
         stage('Test') { 
             steps {
                 nodejs(nodeJSInstallationName: 'NodeJS 21.7.3') {
-                    sh 'cd ./cucumber-repo'
+                    sh 'cd /Users/admin/Documents/cucumber-repo'
                     sh 'npm install'
                     sh 'npm run cucumber-test'
                 }
