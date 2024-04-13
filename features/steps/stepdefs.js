@@ -1,6 +1,8 @@
 const assert = require('assert');
 const { Given, When, Then } = require('@cucumber/cucumber');
 const { Builder, By, Capabilities, Key } = require('selenium-webdriver');
+const options   = new chrome.Options();
+options.addArguments('--headless');
 const capabilities = Capabilities.chrome();
 capabilities.set('chromeOptions', { "w3c": false });
 const driver = new Builder().withCapabilities(capabilities).build();
