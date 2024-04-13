@@ -12,6 +12,7 @@ pipeline {
             steps {
                 nodejs(nodeJSInstallationName: 'NodeJS 21.7.3') {
                     sh 'cd /Users/admin/Documents/cucumber-repo'
+                    sh 'rm -rf .git/hooks'
                     sh 'npm install'
                     sh 'npm run cucumber-test'
                     sh 'npx allure serve allure-results'
