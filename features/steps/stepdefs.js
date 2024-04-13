@@ -5,6 +5,10 @@ const chrome = require('selenium-webdriver/chrome');
 const capabilities = Capabilities.chrome();
 capabilities.set('chromeOptions', { "w3c": false});
 //const driver = new Builder().withCapabilities(capabilities).build();
+const screen = {
+  width: 640,
+  height: 480
+};
 let driver = new Builder()
     .forBrowser('chrome')
     .setChromeOptions(new chrome.Options().addArguments('--headless').windowSize(screen)).build();
