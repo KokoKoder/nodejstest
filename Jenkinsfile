@@ -1,14 +1,18 @@
 pipeline {
-    agent { docker { image '21.7.2' } }
+    agent any
     stages {
         stage('Build') {
             steps {
-                sh 'npm install'
+                nodejs(nodeJSInstallationName: 'NodeJS 21.7.3', configId: '<config-file-provider-id>') {
+                    sh 'npm install'
+                }
             }
         }
         stage('Test') { 
             steps {
-                sh 'npm run cucumber-test'
+                nodejs(nodeJSInstallationName: 'NodeJS 21.7.3', configId: '<config-file-provider-id>') {
+                    sh 'npm run cucumber-test'
+                }
             }
         }
     }
