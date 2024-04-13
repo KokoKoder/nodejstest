@@ -14,6 +14,7 @@ pipeline {
                     sh 'cd /Users/admin/Documents/cucumber-repo'
                     sh 'npm install'
                     sh 'npm run cucumber-test'
+                    sh 'npx allure serve allure-results'
                 }
             }
         }
