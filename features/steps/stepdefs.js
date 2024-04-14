@@ -1,9 +1,12 @@
 const assert = require('assert');
+import { Given, When, Then, And } from 'cypress-cucumber-preprocessor/steps';
+/** 
 const { Given, When, Then } = require('@cucumber/cucumber');
 console.log('line 3 \n');
 const { Builder, By, Capabilities, Key } = require('selenium-webdriver');
 console.log('line 5 \n');
 const chrome = require('selenium-webdriver/chrome');
+**/
 //const capabilities = Capabilities.chrome();
 //capabilities.set('chromeOptions', { "w3c": false});
 //const driver = new Builder().withCapabilities(capabilities).build();
@@ -19,11 +22,13 @@ let driver = new Builder()
  
 Given('we navigate to python.org', async function () {
   console.log('line 21 \n');
-    await driver.get('http://python.org');
+  cy.visit('https://example.com');
+  // await driver.get('http://python.org');
 });
 
 When('we check the title', async function () {
-    this.title = await driver.getTitle();
+    //this.title = await driver.getTitle();
+    this.title = cy.get('title')
     console.log('title step', this.title, '\n');
   });
 

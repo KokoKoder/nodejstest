@@ -11,9 +11,7 @@ pipeline {
 
         stage('Test') { 
             steps {
-                sh 'npm install'
-                sh 'npm run sample-test'
-                sh 'npm run cucumber-test'
+                sh 'npx cypress run'
             }
         }
 

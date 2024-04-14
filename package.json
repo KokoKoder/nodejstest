@@ -3,20 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "chromedriver": "^123.0.3",
     "@cucumber/cucumber": "^10.4.0",
+    "chromedriver": "^123.0.3",
+    "gherkin-testcafe": "^7.2.0",
     "mocha": "10.4.0",
-    "selenium-webdriver": "^4.19.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "selenium-webdriver": "^4.19.0",
+    "testcafe": "^3.5.0",
+    "testcafe-cucumber-steps": "^1.21.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "sample-test": "node selenium-test.js",
     "cucumber-test": "cucumber-js",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test-e2e": "node_modules/.bin/gherkin-testcafe chrome,firefox node_modules/testcafe-cucumber-steps/index.js tests/**/*.js tests/**/*.feature"
   },
   "browserslist": {
     "production": [
@@ -29,5 +33,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cypress": "^13.7.3",
+    "cypress-cucumber-preprocessor": "^4.3.1"
   }
 }
